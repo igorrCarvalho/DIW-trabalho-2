@@ -242,6 +242,17 @@ a {
     color: #777;
 }
 
+/* ========== SEÇÃO: GRÁFICO ========== */
+
+.grafico-wrapper {
+    background-color: #202020;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 16px;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
 /* ========== SEÇÃO 3: AUTOR ========== */
 
 .autor__subtitulo {

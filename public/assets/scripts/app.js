@@ -192,6 +192,52 @@ function montarDetalhe() {
   });
 }
 
+// Monta um gráfico de barras com a quantidade de vídeos por categoria
+function montarGrafico(lista) {
+  const canvas = document.getElementById("grafico-categorias");
+  if (!canvas) return;
+
+  const contagem = {};
+  lista.forEach(function (v) {
+    contagem[v.categoria] = (contagem[v.categoria] || 0) + 1;
+  });
+
+  const categorias = Object.keys(contagem);
+  const valores = categorias.map(function (c) {
+    return contagem[c];
+  });
+
+  new Chart(canvas, {
+    type: "bar",
+    data: {
+      labels: categorias,
+      datasets: [
+        {
+          label: "Quantidade de vídeos",
+          data: valores,
+          backgroundColor: "#3ea6ff"
+        }
+      ]
+    },
+    options: {
+      plugins: {
+        legend: { labels: { color: "#ccc" } }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: { stepSize: 1, color: "#ccc" },
+          grid: { color: "#333" }
+        },
+        x: {
+          ticks: { color: "#ccc" },
+          grid: { color: "#333" }
+        }
+      }
+    }
+  });
+}
+
 // Filtra os vídeos pelo texto digitado (título ou descrição)
 function filtrarVideos(termo) {
   const texto = termo.trim().toLowerCase();
@@ -222,6 +268,7 @@ function iniciarHome() {
     videos = lista;
     montarCarrossel(videos);
     montarCards(videos);
+    montarGrafico(videos);
     ativarPesquisa();
   });
 }
