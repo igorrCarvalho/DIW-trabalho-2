@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoTube</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="header__logo">VideoTube</a>
+
+        <nav class="header__menu">
+            <a class="header__link header__link--active" href="index.html">Home</a>
+            <a class="header__link" href="index.html">Em Alta</a>
+            <a class="header__link" href="index.html">Inscrições</a>
+        </nav>
+
+        <form class="header__search" action="#" method="get">
+            <input type="text" name="q" placeholder="Buscar...">
+            <button type="submit">Buscar</button>
+        </form>
+    </header>
+
+    <main class="container py-4">
+
+        <section class="secao">
+            <h2 class="secao__titulo">Vídeos em Destaque</h2>
+
+            <div id="carouselDestaques" class="carousel slide" data-bs-ride="carousel">
+                <div id="carousel-indicators" class="carousel-indicators"></div>
+
+                <div id="carousel-inner" class="carousel-inner"></div>
+
+                <button class="carousel-control-prev" type="button"
+                    data-bs-target="#carouselDestaques" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button"
+                    data-bs-target="#carouselDestaques" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2 class="secao__titulo">Todos os Vídeos</h2>
+            <div id="lista-videos" class="row g-4"></div>
+        </section>
+
+        <section class="secao autor">
+            <h2 class="secao__titulo">Informações do Aluno</h2>
+            <div class="row g-4">
+                <div class="col-md-7">
+                    <h3 class="autor__subtitulo">Sobre</h3>
+                    <p id="autor-sobre" class="autor__texto"></p>
+                </div>
+                <div class="col-md-5">
+                    <h3 class="autor__subtitulo">Autoria</h3>
+                    <div class="autor__card">
+                        <img id="autor-avatar" class="autor__avatar" src="" alt="Foto do autor">
+                        <div class="autor__dados">
+                            <p><strong>Aluno:</strong> <span id="autor-nome"></span></p>
+                            <p><strong>Curso:</strong> <span id="autor-curso"></span></p>
+                            <p><strong>Turma:</strong> <span id="autor-turma"></span></p>
+                        </div>
+                    </div>
+                    <div class="autor__redes">
+                        <span>Redes sociais:</span>
+                        <a id="autor-facebook" href="#">Facebook</a>
+                        <a id="autor-twitter" href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 VideoTube. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

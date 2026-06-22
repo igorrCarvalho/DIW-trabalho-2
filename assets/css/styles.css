@@ -1,0 +1,434 @@
+/* ============================================================
+   VideoTube - estilos próprios (tema escuro)
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #181818;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ========== CABEÇALHO ========== */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 10px 20px;
+    background-color: #202020;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    border-bottom: 1px solid #333;
+}
+
+.header__logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.header__menu {
+    display: flex;
+    gap: 18px;
+}
+
+.header__link {
+    color: #aaa;
+    font-size: 14px;
+    padding: 4px 2px;
+}
+
+.header__link:hover {
+    color: #fff;
+}
+
+.header__link--active {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.header__search {
+    display: flex;
+    flex: 1;
+    min-width: 180px;
+    max-width: 400px;
+}
+
+.header__search input {
+    padding: 6px 12px;
+    width: 100%;
+    border: 1px solid #555;
+    background-color: #121212;
+    color: #fff;
+    outline: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.header__search button {
+    padding: 6px 14px;
+    border: 1px solid #555;
+    background-color: #303030;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+/* ========== SEÇÕES ========== */
+
+.secao {
+    margin-bottom: 40px;
+}
+
+.secao__titulo {
+    font-size: 20px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #333;
+}
+
+/* ========== SEÇÃO 1: CARROSSEL ========== */
+
+.carousel {
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.carousel-link {
+    display: block;
+    color: #fff;
+}
+
+.carousel-img {
+    height: 420px;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.carousel-caption {
+    left: 8%;
+    right: 8%;
+    bottom: 18%;
+    text-align: left;
+}
+
+.carousel-caption h3 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 15px;
+    color: #ddd;
+}
+
+/* ========== SEÇÃO 2: CARDS DE VÍDEO ========== */
+
+.card-link {
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.video-card {
+    background-color: #202020;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-4px);
+    border-color: #3ea6ff;
+}
+
+.thumb-wrapper {
+    position: relative;
+}
+
+.thumb-wrapper .card-img-top {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.thumb-duracao {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.card-body {
+    padding: 12px;
+}
+
+.card-head {
+    display: flex;
+    gap: 10px;
+}
+
+.card-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.card-title {
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #fff;
+}
+
+.card-canal {
+    font-size: 13px;
+    color: #aaa;
+}
+
+.card-meta {
+    font-size: 12px;
+    color: #777;
+}
+
+/* ========== SEÇÃO 3: AUTOR ========== */
+
+.autor__subtitulo {
+    font-size: 15px;
+    color: #3ea6ff;
+    margin-bottom: 10px;
+}
+
+.autor__texto {
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.autor__card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background-color: #202020;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 14px;
+}
+
+.autor__avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.autor__dados p {
+    font-size: 13px;
+    color: #ccc;
+    margin-bottom: 2px;
+}
+
+.autor__redes {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+.autor__redes a {
+    color: #3ea6ff;
+    margin-left: 10px;
+}
+
+/* ========== PÁGINA DE DETALHE ========== */
+
+.voltar {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #3ea6ff;
+    font-size: 14px;
+}
+
+.detalhe-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.detalhe-img img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.detalhe-titulo {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.detalhe-canal {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.detalhe-canal img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.detalhe-descricao {
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.detalhe-stats {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.detalhe-stats li {
+    background-color: #202020;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+}
+
+.detalhe-stats strong {
+    display: block;
+    font-size: 18px;
+    color: #fff;
+}
+
+.detalhe-stats span {
+    font-size: 12px;
+    color: #888;
+}
+
+.erro {
+    color: #ccc;
+    font-size: 15px;
+}
+
+.erro a {
+    color: #3ea6ff;
+}
+
+/* ========== FOTOS DO VÍDEO (entidade secundária) ========== */
+
+.foto-card {
+    background-color: #202020;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.foto-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+}
+
+.foto-card figcaption {
+    padding: 8px 10px;
+    font-size: 13px;
+    color: #ccc;
+}
+
+/* ========== FOOTER ========== */
+
+.footer {
+    background-color: #202020;
+    text-align: center;
+    padding: 16px;
+    font-size: 13px;
+    color: #777;
+    border-top: 1px solid #333;
+}
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+/* Tablet (até 992px) */
+@media (max-width: 992px) {
+    .carousel-img {
+        height: 340px;
+    }
+}
+
+/* Tablet menor / mobile grande (até 768px) */
+@media (max-width: 768px) {
+    .detalhe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel-img {
+        height: 260px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 20px;
+    }
+}
+
+/* Mobile (até 576px): cabeçalho em coluna, busca embaixo */
+@media (max-width: 576px) {
+    .header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .header__menu {
+        gap: 12px;
+    }
+
+    .header__search {
+        order: 3;
+        flex-basis: 100%;
+        max-width: none;
+    }
+
+    .carousel-img {
+        height: 200px;
+    }
+
+    .carousel-caption {
+        bottom: 6%;
+    }
+
+    .carousel-caption small {
+        font-size: 11px;
+    }
+
+    .detalhe-stats {
+        grid-template-columns: 1fr;
+    }
+}
