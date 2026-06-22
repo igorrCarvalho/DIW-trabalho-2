@@ -1,5 +1,4 @@
-// Endereço base da API do JSON Server
-const API = "http://localhost:3000";
+// A constante API e o controle de sessão ficam em login.js (carregado antes)
 
 // Dados do autor do projeto (Seção 4 da home)
 const autor = {
