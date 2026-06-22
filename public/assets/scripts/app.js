@@ -20,6 +20,9 @@ const autor = {
 // Guarda a lista de vídeos carregada da API para reutilizar (ex.: pesquisa)
 let videos = [];
 
+// Favoritos do usuário logado carregados da API
+let favoritos = [];
+
 function formatarViews(n) {
   if (n >= 1000000) return (n / 1000000).toFixed(1).replace(".0", "") + " mi";
   if (n >= 1000) return Math.round(n / 1000) + " mil";
@@ -43,6 +46,88 @@ function buscarVideo(id) {
   return fetch(API + "/videos/" + id).then(function (resposta) {
     if (!resposta.ok) return null;
     return resposta.json();
+  });
+}
+
+// Carrega os favoritos do usuário logado (vazio se for visitante)
+function carregarFavoritos() {
+  const usuario = usuarioLogado();
+  if (!usuario) {
+    favoritos = [];
+    return Promise.resolve();
+  }
+  return fetch(API + "/favoritos?usuarioId=" + usuario.id)
+    .then(function (resposta) {
+      return resposta.json();
+    })
+    .then(function (data) {
+      favoritos = data;
+    });
+}
+
+// Retorna o registro de favorito de um vídeo, se existir
+function acharFavorito(videoId) {
+  return favoritos.find(function (f) {
+    return String(f.videoId) === String(videoId);
+  });
+}
+
+// Devolve a classe do ícone de coração conforme o vídeo seja favorito ou não
+function iconeFavorito(videoId) {
+  return acharFavorito(videoId) ? "bi-heart-fill" : "bi-heart";
+}
+
+// Marca ou desmarca um vídeo como favorito do usuário logado
+function alternarFavorito(videoId) {
+  const usuario = usuarioLogado();
+  if (!usuario) {
+    alert("Faça login para marcar favoritos.");
+    window.location.href = "login.html";
+    return;
+  }
+
+  const favorito = acharFavorito(videoId);
+
+  if (favorito) {
+    fetch(API + "/favoritos/" + favorito.id, { method: "DELETE" }).then(function () {
+      favoritos = favoritos.filter(function (f) {
+        return f.id !== favorito.id;
+      });
+      atualizarIconesFavorito();
+    });
+  } else {
+    const novo = { usuarioId: usuario.id, videoId: videoId };
+    fetch(API + "/favoritos", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(novo)
+    })
+      .then(function (resposta) {
+        return resposta.json();
+      })
+      .then(function (data) {
+        favoritos.push(data);
+        atualizarIconesFavorito();
+      });
+  }
+}
+
+// Atualiza o desenho de todos os corações da página (cheio/vazio)
+function atualizarIconesFavorito() {
+  const botoes = document.querySelectorAll(".btn-favorito");
+  botoes.forEach(function (botao) {
+    const icone = botao.querySelector("i");
+    icone.className = "bi " + iconeFavorito(botao.dataset.id);
+  });
+}
+
+// Liga o clique nos botões de favorito (delegação de evento)
+function ativarFavoritos() {
+  document.addEventListener("click", function (e) {
+    const botao = e.target.closest(".btn-favorito");
+    if (!botao) return;
+    e.preventDefault();
+    alternarFavorito(botao.dataset.id);
   });
 }
 
@@ -104,6 +189,9 @@ function montarCards(lista) {
             '<div class="thumb-wrapper">' +
               '<img src="' + video.imagem + '" class="card-img-top" alt="' + video.titulo + '">' +
               '<span class="thumb-duracao">' + video.duracao + '</span>' +
+              '<button type="button" class="btn-favorito" data-id="' + video.id + '" aria-label="Favoritar">' +
+                '<i class="bi ' + iconeFavorito(video.id) + '"></i>' +
+              '</button>' +
             '</div>' +
             '<div class="card-body">' +
               '<div class="card-head">' +
@@ -145,7 +233,8 @@ function montarDetalhe() {
 
   const id = obterIdDaUrl();
 
-  buscarVideo(id).then(function (video) {
+  Promise.all([buscarVideo(id), carregarFavoritos()]).then(function (resultados) {
+    const video = resultados[0];
     if (!video) {
       container.innerHTML =
         '<p class="erro">Vídeo não encontrado. ' +
@@ -161,7 +250,12 @@ function montarDetalhe() {
           '<img src="' + video.imagem + '" alt="' + video.titulo + '">' +
         '</div>' +
         '<div class="detalhe-info">' +
-          '<span class="badge bg-danger mb-2">' + video.categoria + '</span>' +
+          '<div class="detalhe-topo">' +
+            '<span class="badge bg-danger mb-2">' + video.categoria + '</span>' +
+            '<button type="button" class="btn-favorito btn-favorito--detalhe" data-id="' + video.id + '" aria-label="Favoritar">' +
+              '<i class="bi ' + iconeFavorito(video.id) + '"></i>' +
+            '</button>' +
+          '</div>' +
           '<h1 class="detalhe-titulo">' + video.titulo + '</h1>' +
           '<div class="detalhe-canal">' +
             '<img src="' + video.avatar + '" alt="' + video.canal + '">' +
@@ -179,7 +273,7 @@ function montarDetalhe() {
 
     const galeria = document.getElementById("detalhe-fotos");
     galeria.innerHTML = "";
-    video.fotos.forEach(function (foto) {
+    (video.fotos || []).forEach(function (foto) {
       galeria.innerHTML +=
         '<div class="col-6 col-md-4 col-lg-3">' +
           '<figure class="foto-card">' +
@@ -263,8 +357,8 @@ function ativarPesquisa() {
 function iniciarHome() {
   if (!document.getElementById("lista-videos")) return;
 
-  buscarVideos().then(function (lista) {
-    videos = lista;
+  Promise.all([buscarVideos(), carregarFavoritos()]).then(function (resultados) {
+    videos = resultados[0];
     montarCarrossel(videos);
     montarCards(videos);
     montarGrafico(videos);
@@ -276,4 +370,5 @@ document.addEventListener("DOMContentLoaded", function () {
   montarAutor();
   iniciarHome();
   montarDetalhe();
+  ativarFavoritos();
 });
