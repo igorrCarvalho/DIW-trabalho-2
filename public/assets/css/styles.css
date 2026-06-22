@@ -60,6 +60,12 @@ a {
     border-bottom: 2px solid #fff;
 }
 
+.header__usuario {
+    color: #3ea6ff;
+    font-size: 14px;
+    align-self: center;
+}
+
 .header__search {
     display: flex;
     flex: 1;
