@@ -15,10 +15,26 @@
       "likes": 8900,
       "imagem": "https://picsum.photos/seed/video1/640/360",
       "fotos": [
-        { "id": 1, "titulo": "Vista do topo da montanha", "imagem": "https://picsum.photos/seed/v1f1/400/240" },
-        { "id": 2, "titulo": "Trilha entre as árvores", "imagem": "https://picsum.photos/seed/v1f2/400/240" },
-        { "id": 3, "titulo": "Acampamento ao pôr do sol", "imagem": "https://picsum.photos/seed/v1f3/400/240" },
-        { "id": 4, "titulo": "Lago cristalino", "imagem": "https://picsum.photos/seed/v1f4/400/240" }
+        {
+          "id": 1,
+          "titulo": "Vista do topo da montanha",
+          "imagem": "https://picsum.photos/seed/v1f1/400/240"
+        },
+        {
+          "id": 2,
+          "titulo": "Trilha entre as árvores",
+          "imagem": "https://picsum.photos/seed/v1f2/400/240"
+        },
+        {
+          "id": 3,
+          "titulo": "Acampamento ao pôr do sol",
+          "imagem": "https://picsum.photos/seed/v1f3/400/240"
+        },
+        {
+          "id": 4,
+          "titulo": "Lago cristalino",
+          "imagem": "https://picsum.photos/seed/v1f4/400/240"
+        }
       ]
     },
     {
@@ -36,9 +52,21 @@
       "likes": 4200,
       "imagem": "https://picsum.photos/seed/video2/640/360",
       "fotos": [
-        { "id": 1, "titulo": "Ingredientes frescos", "imagem": "https://picsum.photos/seed/v2f1/400/240" },
-        { "id": 2, "titulo": "Massa sendo preparada", "imagem": "https://picsum.photos/seed/v2f2/400/240" },
-        { "id": 3, "titulo": "Prato finalizado", "imagem": "https://picsum.photos/seed/v2f3/400/240" }
+        {
+          "id": 1,
+          "titulo": "Ingredientes frescos",
+          "imagem": "https://picsum.photos/seed/v2f1/400/240"
+        },
+        {
+          "id": 2,
+          "titulo": "Massa sendo preparada",
+          "imagem": "https://picsum.photos/seed/v2f2/400/240"
+        },
+        {
+          "id": 3,
+          "titulo": "Prato finalizado",
+          "imagem": "https://picsum.photos/seed/v2f3/400/240"
+        }
       ]
     },
     {
@@ -56,10 +84,26 @@
       "likes": 2100,
       "imagem": "https://picsum.photos/seed/video3/640/360",
       "fotos": [
-        { "id": 1, "titulo": "Avenida iluminada", "imagem": "https://picsum.photos/seed/v3f1/400/240" },
-        { "id": 2, "titulo": "Praça central à noite", "imagem": "https://picsum.photos/seed/v3f2/400/240" },
-        { "id": 3, "titulo": "Reflexos na rua molhada", "imagem": "https://picsum.photos/seed/v3f3/400/240" },
-        { "id": 4, "titulo": "Letreiros neon", "imagem": "https://picsum.photos/seed/v3f4/400/240" }
+        {
+          "id": 1,
+          "titulo": "Avenida iluminada",
+          "imagem": "https://picsum.photos/seed/v3f1/400/240"
+        },
+        {
+          "id": 2,
+          "titulo": "Praça central à noite",
+          "imagem": "https://picsum.photos/seed/v3f2/400/240"
+        },
+        {
+          "id": 3,
+          "titulo": "Reflexos na rua molhada",
+          "imagem": "https://picsum.photos/seed/v3f3/400/240"
+        },
+        {
+          "id": 4,
+          "titulo": "Letreiros neon",
+          "imagem": "https://picsum.photos/seed/v3f4/400/240"
+        }
       ]
     },
     {
@@ -77,9 +121,21 @@
       "likes": 7600,
       "imagem": "https://picsum.photos/seed/video4/640/360",
       "fotos": [
-        { "id": 1, "titulo": "Editor de código", "imagem": "https://picsum.photos/seed/v4f1/400/240" },
-        { "id": 2, "titulo": "Exemplo de flexbox", "imagem": "https://picsum.photos/seed/v4f2/400/240" },
-        { "id": 3, "titulo": "Resultado no navegador", "imagem": "https://picsum.photos/seed/v4f3/400/240" }
+        {
+          "id": 1,
+          "titulo": "Editor de código",
+          "imagem": "https://picsum.photos/seed/v4f1/400/240"
+        },
+        {
+          "id": 2,
+          "titulo": "Exemplo de flexbox",
+          "imagem": "https://picsum.photos/seed/v4f2/400/240"
+        },
+        {
+          "id": 3,
+          "titulo": "Resultado no navegador",
+          "imagem": "https://picsum.photos/seed/v4f3/400/240"
+        }
       ]
     },
     {
@@ -97,8 +153,16 @@
       "likes": 1500,
       "imagem": "https://picsum.photos/seed/video5/640/360",
       "fotos": [
-        { "id": 1, "titulo": "Café da manhã saudável", "imagem": "https://picsum.photos/seed/v5f1/400/240" },
-        { "id": 2, "titulo": "Alongamento matinal", "imagem": "https://picsum.photos/seed/v5f2/400/240" }
+        {
+          "id": 1,
+          "titulo": "Café da manhã saudável",
+          "imagem": "https://picsum.photos/seed/v5f1/400/240"
+        },
+        {
+          "id": 2,
+          "titulo": "Alongamento matinal",
+          "imagem": "https://picsum.photos/seed/v5f2/400/240"
+        }
       ]
     },
     {
@@ -116,9 +180,21 @@
       "likes": 3800,
       "imagem": "https://picsum.photos/seed/video6/640/360",
       "fotos": [
-        { "id": 1, "titulo": "Posição dos dedos", "imagem": "https://picsum.photos/seed/v6f1/400/240" },
-        { "id": 2, "titulo": "Violão em close", "imagem": "https://picsum.photos/seed/v6f2/400/240" },
-        { "id": 3, "titulo": "Praticando os acordes", "imagem": "https://picsum.photos/seed/v6f3/400/240" }
+        {
+          "id": 1,
+          "titulo": "Posição dos dedos",
+          "imagem": "https://picsum.photos/seed/v6f1/400/240"
+        },
+        {
+          "id": 2,
+          "titulo": "Violão em close",
+          "imagem": "https://picsum.photos/seed/v6f2/400/240"
+        },
+        {
+          "id": 3,
+          "titulo": "Praticando os acordes",
+          "imagem": "https://picsum.photos/seed/v6f3/400/240"
+        }
       ]
     },
     {
@@ -136,9 +212,21 @@
       "likes": 5900,
       "imagem": "https://picsum.photos/seed/video7/640/360",
       "fotos": [
-        { "id": 1, "titulo": "Céu alaranjado", "imagem": "https://picsum.photos/seed/v7f1/400/240" },
-        { "id": 2, "titulo": "Sol no horizonte", "imagem": "https://picsum.photos/seed/v7f2/400/240" },
-        { "id": 3, "titulo": "Estrelas surgindo", "imagem": "https://picsum.photos/seed/v7f3/400/240" }
+        {
+          "id": 1,
+          "titulo": "Céu alaranjado",
+          "imagem": "https://picsum.photos/seed/v7f1/400/240"
+        },
+        {
+          "id": 2,
+          "titulo": "Sol no horizonte",
+          "imagem": "https://picsum.photos/seed/v7f2/400/240"
+        },
+        {
+          "id": 3,
+          "titulo": "Estrelas surgindo",
+          "imagem": "https://picsum.photos/seed/v7f3/400/240"
+        }
       ]
     },
     {
@@ -156,9 +244,21 @@
       "likes": 8100,
       "imagem": "https://picsum.photos/seed/video8/640/360",
       "fotos": [
-        { "id": 1, "titulo": "Aquecimento", "imagem": "https://picsum.photos/seed/v8f1/400/240" },
-        { "id": 2, "titulo": "Exercício de força", "imagem": "https://picsum.photos/seed/v8f2/400/240" },
-        { "id": 3, "titulo": "Alongamento final", "imagem": "https://picsum.photos/seed/v8f3/400/240" }
+        {
+          "id": 1,
+          "titulo": "Aquecimento",
+          "imagem": "https://picsum.photos/seed/v8f1/400/240"
+        },
+        {
+          "id": 2,
+          "titulo": "Exercício de força",
+          "imagem": "https://picsum.photos/seed/v8f2/400/240"
+        },
+        {
+          "id": 3,
+          "titulo": "Alongamento final",
+          "imagem": "https://picsum.photos/seed/v8f3/400/240"
+        }
       ]
     }
   ],
@@ -177,6 +277,14 @@
       "senha": "123",
       "nome": "Usuario Comum",
       "email": "user@videotube.com",
+      "admin": false
+    },
+    {
+      "id": "343b0fd6-c273-4cf3-b501-46a3a41d9ca5",
+      "login": "igor",
+      "senha": "12345678",
+      "nome": "igor",
+      "email": "igor@gmail.com",
       "admin": false
     }
   ],
