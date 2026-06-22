@@ -105,6 +105,33 @@ a {
     border-bottom: 1px solid #333;
 }
 
+.secao__topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #333;
+}
+
+.secao__topo .secao__titulo {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.busca-input {
+    padding: 6px 12px;
+    min-width: 220px;
+    border: 1px solid #555;
+    background-color: #121212;
+    color: #fff;
+    border-radius: 6px;
+    outline: none;
+}
+
 /* ========== SEÇÃO 1: CARROSSEL ========== */
 
 .carousel {

@@ -192,6 +192,28 @@ function montarDetalhe() {
   });
 }
 
+// Filtra os vídeos pelo texto digitado (título ou descrição)
+function filtrarVideos(termo) {
+  const texto = termo.trim().toLowerCase();
+  const filtrados = videos.filter(function (v) {
+    return (
+      v.titulo.toLowerCase().includes(texto) ||
+      v.descricao.toLowerCase().includes(texto)
+    );
+  });
+  montarCards(filtrados);
+}
+
+// Liga o campo de pesquisa ao filtro dos cards
+function ativarPesquisa() {
+  const busca = document.getElementById("busca-input");
+  if (!busca) return;
+
+  busca.addEventListener("input", function () {
+    filtrarVideos(busca.value);
+  });
+}
+
 // Inicializa a home (carrossel + cards) buscando os dados da API
 function iniciarHome() {
   if (!document.getElementById("lista-videos")) return;
@@ -200,6 +222,7 @@ function iniciarHome() {
     videos = lista;
     montarCarrossel(videos);
     montarCards(videos);
+    ativarPesquisa();
   });
 }
 
