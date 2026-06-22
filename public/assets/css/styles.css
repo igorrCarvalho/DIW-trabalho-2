@@ -242,6 +242,23 @@ a {
     color: #777;
 }
 
+/* ========== LOGIN / CADASTRO ========== */
+
+.auth-card {
+    max-width: 380px;
+    margin: 40px auto;
+    background-color: #202020;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.auth-titulo {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 /* ========== SEÇÃO: GRÁFICO ========== */
 
 .grafico-wrapper {
