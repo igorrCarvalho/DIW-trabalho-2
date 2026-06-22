@@ -119,6 +119,11 @@ function atualizarIconesFavorito() {
     const icone = botao.querySelector("i");
     icone.className = "bi " + iconeFavorito(botao.dataset.id);
   });
+
+  // Se a página de favoritos definir esse gancho, atualiza a lista exibida
+  if (typeof aoMudarFavoritos === "function") {
+    aoMudarFavoritos();
+  }
 }
 
 // Liga o clique nos botões de favorito (delegação de evento)
@@ -170,6 +175,35 @@ function montarCarrossel(lista) {
   });
 }
 
+// Monta o HTML de um card de vídeo (reutilizado na home e nos favoritos)
+function htmlCardVideo(video) {
+  return (
+    '<div class="col-12 col-sm-6 col-lg-4 col-xl-3">' +
+      '<a href="detalhes.html?id=' + video.id + '" class="card-link">' +
+        '<div class="card video-card h-100">' +
+          '<div class="thumb-wrapper">' +
+            '<img src="' + video.imagem + '" class="card-img-top" alt="' + video.titulo + '">' +
+            '<span class="thumb-duracao">' + video.duracao + '</span>' +
+            '<button type="button" class="btn-favorito" data-id="' + video.id + '" aria-label="Favoritar">' +
+              '<i class="bi ' + iconeFavorito(video.id) + '"></i>' +
+            '</button>' +
+          '</div>' +
+          '<div class="card-body">' +
+            '<div class="card-head">' +
+              '<img src="' + video.avatar + '" class="card-avatar" alt="' + video.canal + '">' +
+              '<div>' +
+                '<h3 class="card-title">' + video.titulo + '</h3>' +
+                '<p class="card-canal">' + video.canal + '</p>' +
+                '<p class="card-meta">' + formatarViews(video.views) + ' visualizações · ' + formatarData(video.data) + '</p>' +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+      '</a>' +
+    '</div>'
+  );
+}
+
 function montarCards(lista) {
   const grade = document.getElementById("lista-videos");
   if (!grade) return;
@@ -182,30 +216,7 @@ function montarCards(lista) {
   }
 
   lista.forEach(function (video) {
-    grade.innerHTML +=
-      '<div class="col-12 col-sm-6 col-lg-4 col-xl-3">' +
-        '<a href="detalhes.html?id=' + video.id + '" class="card-link">' +
-          '<div class="card video-card h-100">' +
-            '<div class="thumb-wrapper">' +
-              '<img src="' + video.imagem + '" class="card-img-top" alt="' + video.titulo + '">' +
-              '<span class="thumb-duracao">' + video.duracao + '</span>' +
-              '<button type="button" class="btn-favorito" data-id="' + video.id + '" aria-label="Favoritar">' +
-                '<i class="bi ' + iconeFavorito(video.id) + '"></i>' +
-              '</button>' +
-            '</div>' +
-            '<div class="card-body">' +
-              '<div class="card-head">' +
-                '<img src="' + video.avatar + '" class="card-avatar" alt="' + video.canal + '">' +
-                '<div>' +
-                  '<h3 class="card-title">' + video.titulo + '</h3>' +
-                  '<p class="card-canal">' + video.canal + '</p>' +
-                  '<p class="card-meta">' + formatarViews(video.views) + ' visualizações · ' + formatarData(video.data) + '</p>' +
-                '</div>' +
-              '</div>' +
-            '</div>' +
-          '</div>' +
-        '</a>' +
-      '</div>';
+    grade.innerHTML += htmlCardVideo(video);
   });
 }
 

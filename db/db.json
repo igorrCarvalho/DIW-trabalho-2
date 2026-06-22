@@ -288,11 +288,5 @@
       "admin": false
     }
   ],
-  "favoritos": [
-    {
-      "usuarioId": "343b0fd6-c273-4cf3-b501-46a3a41d9ca5",
-      "videoId": "1",
-      "id": 1
-    }
-  ]
+  "favoritos": []
 }
