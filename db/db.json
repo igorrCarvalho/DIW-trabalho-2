@@ -4,7 +4,7 @@
       "id": 1,
       "titulo": "Explorando as Montanhas dos Alpes",
       "canal": "Adventure TV",
-      "avatar": "https://picsum.photos/seed/canal1/48/48",
+      "avatar": "assets/img/canal1.jpg",
       "descricao": "Uma viagem incrível pelas trilhas mais bonitas dos Alpes europeus.",
       "conteudo": "Neste vídeo acompanhamos uma expedição de 5 dias pelas montanhas dos Alpes. Mostramos as melhores trilhas, dicas de equipamento e paisagens de tirar o fôlego. Ideal para quem ama natureza e aventura ao ar livre.",
       "categoria": "Viagem",
@@ -13,59 +13,27 @@
       "duracao": "12:45",
       "views": 124000,
       "likes": 8900,
-      "imagem": "https://picsum.photos/seed/video1/640/360",
+      "imagem": "assets/img/video1.jpg",
       "fotos": [
         {
           "id": 1,
           "titulo": "Vista do topo da montanha",
-          "imagem": "https://picsum.photos/seed/v1f1/400/240"
+          "imagem": "assets/img/v1f1.jpg"
         },
         {
           "id": 2,
           "titulo": "Trilha entre as árvores",
-          "imagem": "https://picsum.photos/seed/v1f2/400/240"
+          "imagem": "assets/img/v1f2.jpg"
         },
         {
           "id": 3,
           "titulo": "Acampamento ao pôr do sol",
-          "imagem": "https://picsum.photos/seed/v1f3/400/240"
+          "imagem": "assets/img/v1f3.jpg"
         },
         {
           "id": 4,
           "titulo": "Lago cristalino",
-          "imagem": "https://picsum.photos/seed/v1f4/400/240"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "titulo": "Cozinhando em Casa: Massa Italiana",
-      "canal": "Chef Online",
-      "avatar": "https://picsum.photos/seed/canal2/48/48",
-      "descricao": "Aprenda a fazer uma autêntica massa italiana caseira do zero.",
-      "conteudo": "Receita completa de massa italiana feita à mão. Ensinamos o ponto certo da massa, o molho tradicional e dicas para impressionar a família no jantar.",
-      "categoria": "Culinária",
-      "destaque": true,
-      "data": "2026-05-18",
-      "duracao": "08:30",
-      "views": 54000,
-      "likes": 4200,
-      "imagem": "https://picsum.photos/seed/video2/640/360",
-      "fotos": [
-        {
-          "id": 1,
-          "titulo": "Ingredientes frescos",
-          "imagem": "https://picsum.photos/seed/v2f1/400/240"
-        },
-        {
-          "id": 2,
-          "titulo": "Massa sendo preparada",
-          "imagem": "https://picsum.photos/seed/v2f2/400/240"
-        },
-        {
-          "id": 3,
-          "titulo": "Prato finalizado",
-          "imagem": "https://picsum.photos/seed/v2f3/400/240"
+          "imagem": "assets/img/v1f4.jpg"
         }
       ]
     },
@@ -73,7 +41,7 @@
       "id": 3,
       "titulo": "Caminhada Noturna pela Cidade",
       "canal": "Urban Walks",
-      "avatar": "https://picsum.photos/seed/canal3/48/48",
+      "avatar": "assets/img/canal3.jpg",
       "descricao": "Passeio relaxante pelas ruas iluminadas do centro da cidade.",
       "conteudo": "Um tour noturno pelas principais avenidas e pontos turísticos da cidade. Som ambiente real, sem narração, perfeito para relaxar e estudar.",
       "categoria": "Lifestyle",
@@ -82,27 +50,27 @@
       "duracao": "25:10",
       "views": 31000,
       "likes": 2100,
-      "imagem": "https://picsum.photos/seed/video3/640/360",
+      "imagem": "assets/img/video3.jpg",
       "fotos": [
         {
           "id": 1,
           "titulo": "Avenida iluminada",
-          "imagem": "https://picsum.photos/seed/v3f1/400/240"
+          "imagem": "assets/img/v3f1.jpg"
         },
         {
           "id": 2,
           "titulo": "Praça central à noite",
-          "imagem": "https://picsum.photos/seed/v3f2/400/240"
+          "imagem": "assets/img/v3f2.jpg"
         },
         {
           "id": 3,
           "titulo": "Reflexos na rua molhada",
-          "imagem": "https://picsum.photos/seed/v3f3/400/240"
+          "imagem": "assets/img/v3f3.jpg"
         },
         {
           "id": 4,
           "titulo": "Letreiros neon",
-          "imagem": "https://picsum.photos/seed/v3f4/400/240"
+          "imagem": "assets/img/v3f4.jpg"
         }
       ]
     },
@@ -110,7 +78,7 @@
       "id": 4,
       "titulo": "Aprenda CSS do Zero",
       "canal": "Code Academy",
-      "avatar": "https://picsum.photos/seed/canal4/48/48",
+      "avatar": "assets/img/canal4.jpg",
       "descricao": "Tutorial completo de CSS para iniciantes em desenvolvimento web.",
       "conteudo": "Curso introdutório de CSS cobrindo seletores, box model, flexbox e grid. Com exemplos práticos e exercícios para fixar o conteúdo.",
       "categoria": "Tecnologia",
@@ -119,22 +87,22 @@
       "duracao": "45:00",
       "views": 89000,
       "likes": 7600,
-      "imagem": "https://picsum.photos/seed/video4/640/360",
+      "imagem": "assets/img/video4.jpg",
       "fotos": [
         {
           "id": 1,
           "titulo": "Editor de código",
-          "imagem": "https://picsum.photos/seed/v4f1/400/240"
+          "imagem": "assets/img/v4f1.jpg"
         },
         {
           "id": 2,
           "titulo": "Exemplo de flexbox",
-          "imagem": "https://picsum.photos/seed/v4f2/400/240"
+          "imagem": "assets/img/v4f2.jpg"
         },
         {
           "id": 3,
           "titulo": "Resultado no navegador",
-          "imagem": "https://picsum.photos/seed/v4f3/400/240"
+          "imagem": "assets/img/v4f3.jpg"
         }
       ]
     },
@@ -142,7 +110,7 @@
       "id": 5,
       "titulo": "Rotina Matinal Produtiva",
       "canal": "Daily Vlogs",
-      "avatar": "https://picsum.photos/seed/canal5/48/48",
+      "avatar": "assets/img/canal5.jpg",
       "descricao": "Dicas para começar o dia com mais energia e foco.",
       "conteudo": "Compartilho minha rotina matinal completa: exercícios, café da manhã saudável e organização do dia. Pequenos hábitos que fazem diferença.",
       "categoria": "Lifestyle",
@@ -151,17 +119,17 @@
       "duracao": "10:20",
       "views": 18000,
       "likes": 1500,
-      "imagem": "https://picsum.photos/seed/video5/640/360",
+      "imagem": "assets/img/video5.jpg",
       "fotos": [
         {
           "id": 1,
           "titulo": "Café da manhã saudável",
-          "imagem": "https://picsum.photos/seed/v5f1/400/240"
+          "imagem": "assets/img/v5f1.jpg"
         },
         {
           "id": 2,
           "titulo": "Alongamento matinal",
-          "imagem": "https://picsum.photos/seed/v5f2/400/240"
+          "imagem": "assets/img/v5f2.jpg"
         }
       ]
     },
@@ -169,7 +137,7 @@
       "id": 6,
       "titulo": "Tutorial de Violão para Iniciantes",
       "canal": "Music Hub",
-      "avatar": "https://picsum.photos/seed/canal6/48/48",
+      "avatar": "assets/img/canal6.jpg",
       "descricao": "Seus primeiros acordes no violão de forma simples e prática.",
       "conteudo": "Aula passo a passo para quem nunca tocou violão. Ensinamos os acordes básicos, a postura correta e uma música simples para você praticar.",
       "categoria": "Música",
@@ -178,22 +146,22 @@
       "duracao": "18:55",
       "views": 42000,
       "likes": 3800,
-      "imagem": "https://picsum.photos/seed/video6/640/360",
+      "imagem": "assets/img/video6.jpg",
       "fotos": [
         {
           "id": 1,
           "titulo": "Posição dos dedos",
-          "imagem": "https://picsum.photos/seed/v6f1/400/240"
+          "imagem": "assets/img/v6f1.jpg"
         },
         {
           "id": 2,
           "titulo": "Violão em close",
-          "imagem": "https://picsum.photos/seed/v6f2/400/240"
+          "imagem": "assets/img/v6f2.jpg"
         },
         {
           "id": 3,
           "titulo": "Praticando os acordes",
-          "imagem": "https://picsum.photos/seed/v6f3/400/240"
+          "imagem": "assets/img/v6f3.jpg"
         }
       ]
     },
@@ -201,7 +169,7 @@
       "id": 7,
       "titulo": "Pôr do Sol em Time-lapse",
       "canal": "Nature Films",
-      "avatar": "https://picsum.photos/seed/canal7/48/48",
+      "avatar": "assets/img/canal7.jpg",
       "descricao": "A beleza do entardecer capturada em câmera acelerada.",
       "conteudo": "Um time-lapse hipnotizante do pôr do sol em diferentes locais. Imagens em alta resolução com trilha sonora relaxante.",
       "categoria": "Natureza",
@@ -210,22 +178,22 @@
       "duracao": "04:30",
       "views": 67000,
       "likes": 5900,
-      "imagem": "https://picsum.photos/seed/video7/640/360",
+      "imagem": "assets/img/video7.jpg",
       "fotos": [
         {
           "id": 1,
           "titulo": "Céu alaranjado",
-          "imagem": "https://picsum.photos/seed/v7f1/400/240"
+          "imagem": "assets/img/v7f1.jpg"
         },
         {
           "id": 2,
           "titulo": "Sol no horizonte",
-          "imagem": "https://picsum.photos/seed/v7f2/400/240"
+          "imagem": "assets/img/v7f2.jpg"
         },
         {
           "id": 3,
           "titulo": "Estrelas surgindo",
-          "imagem": "https://picsum.photos/seed/v7f3/400/240"
+          "imagem": "assets/img/v7f3.jpg"
         }
       ]
     },
@@ -233,7 +201,7 @@
       "id": 8,
       "titulo": "Treino de 20 Minutos em Casa",
       "canal": "Fit Life",
-      "avatar": "https://picsum.photos/seed/canal8/48/48",
+      "avatar": "assets/img/canal8.jpg",
       "descricao": "Exercícios sem equipamento para fazer em qualquer lugar.",
       "conteudo": "Treino completo de corpo inteiro em apenas 20 minutos, sem precisar de academia ou equipamentos. Ideal para a rotina corrida do dia a dia.",
       "categoria": "Esporte",
@@ -242,24 +210,40 @@
       "duracao": "20:00",
       "views": 95000,
       "likes": 8100,
-      "imagem": "https://picsum.photos/seed/video8/640/360",
+      "imagem": "assets/img/video8.jpg",
       "fotos": [
         {
           "id": 1,
           "titulo": "Aquecimento",
-          "imagem": "https://picsum.photos/seed/v8f1/400/240"
+          "imagem": "assets/img/v8f1.jpg"
         },
         {
           "id": 2,
           "titulo": "Exercício de força",
-          "imagem": "https://picsum.photos/seed/v8f2/400/240"
+          "imagem": "assets/img/v8f2.jpg"
         },
         {
           "id": 3,
           "titulo": "Alongamento final",
-          "imagem": "https://picsum.photos/seed/v8f3/400/240"
+          "imagem": "assets/img/v8f3.jpg"
         }
       ]
+    },
+    {
+      "titulo": "Video",
+      "canal": "oioi",
+      "categoria": "iaiai",
+      "duracao": "25",
+      "data": "2026-06-10",
+      "views": 24,
+      "likes": 2,
+      "imagem": "assets/img/video9.jpg",
+      "avatar": "assets/img/canal9.jpg",
+      "descricao": "aaaaaaaaaaaaaaaaaaa",
+      "conteudo": "dwadawdawd",
+      "destaque": false,
+      "fotos": [],
+      "id": 9
     }
   ],
   "usuarios": [
@@ -288,5 +272,16 @@
       "admin": false
     }
   ],
-  "favoritos": []
+  "favoritos": [
+    {
+      "usuarioId": "343b0fd6-c273-4cf3-b501-46a3a41d9ca5",
+      "videoId": "3",
+      "id": 2
+    },
+    {
+      "usuarioId": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
+      "videoId": "9",
+      "id": 3
+    }
+  ]
 }

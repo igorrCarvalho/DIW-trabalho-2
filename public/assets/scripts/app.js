@@ -10,7 +10,7 @@ const autor = {
     "Este projeto é uma plataforma de vídeos criada para a disciplina de " +
     "Desenvolvimento de Interfaces Web, com os dados persistidos em JSON e " +
     "expostos por uma API REST com o JSON Server.",
-  avatar: "https://picsum.photos/seed/autor/120/120",
+  avatar: "assets/img/autor.jpg",
   redes: {
     facebook: "#",
     twitter: "#"
