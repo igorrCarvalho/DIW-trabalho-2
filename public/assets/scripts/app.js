@@ -231,7 +231,7 @@ function montarCarrossel() {
 
     interno.innerHTML +=
       '<div class="carousel-item ' + ativo + '">' +
-        '<a href="detalhe.html?id=' + video.id + '" class="carousel-link">' +
+        '<a href="detalhes.html?id=' + video.id + '" class="carousel-link">' +
           '<img src="' + video.imagem + '" class="d-block w-100 carousel-img" alt="' + video.titulo + '">' +
           '<div class="carousel-caption text-start">' +
             '<span class="badge bg-danger mb-2">' + video.categoria + '</span>' +
@@ -251,7 +251,7 @@ function montarCards() {
   dados.videos.forEach(function (video) {
     lista.innerHTML +=
       '<div class="col-12 col-sm-6 col-lg-4 col-xl-3">' +
-        '<a href="detalhe.html?id=' + video.id + '" class="card-link">' +
+        '<a href="detalhes.html?id=' + video.id + '" class="card-link">' +
           '<div class="card video-card h-100">' +
             '<div class="thumb-wrapper">' +
               '<img src="' + video.imagem + '" class="card-img-top" alt="' + video.titulo + '">' +
